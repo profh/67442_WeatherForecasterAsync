@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="WeatherForecaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyq-ex-ftd">
+                                <rect key="frame" x="148" y="138" width="303" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Nkn-BR-3ti"/>
+                                    <constraint firstAttribute="width" constant="303" id="Sl0-iZ-0iq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdG-MC-jLn">
+                                <rect key="frame" x="278" y="210" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPo-OI-Iqt">
+                                <rect key="frame" x="229" y="244" width="142.5" height="73.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="64"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGf-pa-VAz">
+                                <rect key="frame" x="379" y="222" width="71" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="fK5-g6-wMP"/>
+                                    <constraint firstAttribute="height" constant="83" id="ykI-M8-3yt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date and time go here ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zza-MT-L18">
+                                <rect key="frame" x="162.5" y="393" width="275" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="XHN-4K-dET"/>
+                                    <constraint firstAttribute="height" constant="25" id="qe4-c6-Ld6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hPo-OI-Iqt" firstAttribute="top" secondItem="qyq-ex-ftd" secondAttribute="bottom" constant="30" id="2pc-0K-2G9"/>
+                            <constraint firstItem="oGf-pa-VAz" firstAttribute="leading" secondItem="hPo-OI-Iqt" secondAttribute="trailing" constant="7.5" id="2vc-SZ-awb"/>
+                            <constraint firstAttribute="centerX" secondItem="Zza-MT-L18" secondAttribute="centerX" id="3ol-gM-LHT"/>
+                            <constraint firstItem="Zza-MT-L18" firstAttribute="top" secondItem="hPo-OI-Iqt" secondAttribute="bottom" constant="75.5" id="FNr-wb-n2B"/>
+                            <constraint firstItem="hPo-OI-Iqt" firstAttribute="top" secondItem="qyq-ex-ftd" secondAttribute="bottom" constant="30" id="K9s-z2-Abf"/>
+                            <constraint firstAttribute="centerX" secondItem="qyq-ex-ftd" secondAttribute="centerX" id="NZg-i1-diu"/>
+                            <constraint firstAttribute="centerX" secondItem="hPo-OI-Iqt" secondAttribute="centerX" id="OGL-oG-cdS"/>
+                            <constraint firstItem="qyq-ex-ftd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="118" id="ios-Xa-v71"/>
+                            <constraint firstItem="oGf-pa-VAz" firstAttribute="top" secondItem="qyq-ex-ftd" secondAttribute="bottom" constant="8" id="tQP-tb-F8z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="qyq-ex-ftd" id="0Ht-uJ-oSV"/>
+                        <outlet property="dateLabel" destination="Zza-MT-L18" id="K4p-g7-glL"/>
+                        <outlet property="tempLabel" destination="hPo-OI-Iqt" id="3me-wt-jMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="238"/>
+        </scene>
+    </scenes>
+</document>
