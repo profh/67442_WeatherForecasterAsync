@@ -23,9 +23,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    forecast = Forecast()
-    updateLabels()
+
+    isForecastRetrieved({ (result) -> Void in
+      // sleep(2)
+      self.updateLabels()
+    })
+
     dateLabel.text = getDateHumanReadable()
+
+  }
+
+  func isForecastRetrieved(completion: (result: Forecast) -> Void) {
+    forecast = Forecast()
+    var i = 0
+    do { i += 1 } while forecast!.city == nil
+    completion(result: forecast!)
   }
 
   func updateLabels() {
