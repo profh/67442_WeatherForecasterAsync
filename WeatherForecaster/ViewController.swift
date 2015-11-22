@@ -23,8 +23,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    forecast = Forecast()
-    updateLabels()
+    
+    // get the forecast async
+    dispatch_async(dispatch_get_main_queue(), {
+      self.forecast = Forecast()
+      
+      // only for demo purposes; forecast retrieved too fast normally
+      sleep(2)
+      var i = 0
+      do { i += 1 } while self.forecast!.city == nil
+      // update labels as soon as forecast is retrieved
+      self.updateLabels()
+    })
+    
+    // Don't wait to put in the date and time
     dateLabel.text = getDateHumanReadable()
   }
 
